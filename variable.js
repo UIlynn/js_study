@@ -3,8 +3,9 @@
 // use this for Valina Javascript
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6)
+// let : mutable
 let globalName = 'global name';
 {
   let name = `spencer`; // 'spencer'
@@ -26,14 +27,20 @@ console.log(age); // undefined
 }
 console.log(age); // 4
 
-// 3. Constant
-// let : mutable, const : immutable
+// 3. Constant, r(read only)
+// const : immutable
+// use const whenever possible.
+// only use let if variable needs to change.
 // favor immutable data type always for a few reasons:
 // - security
 // - thread safety : parallel access
 // - reduce human mistakes
 const daysInWeek = 7;
 const maxNumber = 5;
+
+// Note!
+// Immutable data types : primitive types, frozen objects (i.e object.freeze())
+// Mutable data types : all objects by defaults are mutable in JS
 
 
 // 4. Variable types
